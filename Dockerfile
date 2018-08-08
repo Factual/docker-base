@@ -7,5 +7,6 @@ RUN chmod a+rx /usr/bin/mo
 
 RUN apt-get update && \
     apt-get install -y gosu && \
-    apt-get -y upgrade && \
+    apt-get upgrade -y && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
